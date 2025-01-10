@@ -1,0 +1,19 @@
+<modal-component title="Podrobnosti uporabnika" show-modal="$ctrl.selectedUser" on-close="$ctrl.onClose()" on-delete="$ctrl.onDelete()">
+    <h5>User details</h5>
+    <p><strong>Name:</strong> {{$ctrl.selectedUser.name}}</p>
+    <p><strong>Username:</strong> {{$ctrl.selectedUser.username}}</p>
+    <p><strong>Email:</strong> {{$ctrl.selectedUser.email}}</p>
+    <p><strong>Phone:</strong> {{$ctrl.selectedUser.phone}}</p>
+    <p><strong>Website:</strong> <a href="http://{{$ctrl.selectedUser.website}}" target="_blank">{{$ctrl.selectedUser.website}}</a></p>
+
+    <h5>Address</h5>
+    <p><strong>Street:</strong> {{$ctrl.selectedUser.address.street}}, {{$ctrl.selectedUser.address.suite}}</p>
+    <p><strong>City:</strong> {{$ctrl.selectedUser.address.city}}</p>
+    <p><strong>Zip Code:</strong> {{$ctrl.selectedUser.address.zipcode}}</p>
+    <p><strong>Geolocation:</strong> Lat: {{$ctrl.selectedUser.address.geo.lat}}, Lng: {{$ctrl.selectedUser.address.geo.lng}}</p>
+
+    <h5>Company</h5>
+    <p><strong>Name:</strong> {{$ctrl.selectedUser.company.name}}</p>
+    <p><strong>Catchphrase:</strong> {{$ctrl.selectedUser.company.catchPhrase}}</p>
+    <p><strong>Business:</strong> {{$ctrl.selectedUser.company.bs}}</p>
+</modal-component>
