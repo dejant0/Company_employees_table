@@ -1,6 +1,6 @@
 angular.module('myApp')
   .factory('ApiService', function($http) {
-    var apiUrl = 'https://jsonplaceholder.typicode.com/users';
+    var apiUrl = 'http://localhost:5000/users';
 
     return {
       getUsers: function() {

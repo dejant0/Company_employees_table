@@ -29,8 +29,8 @@ angular.module('myApp')
 
       vm.deleteUser = function() {
           if (vm.selectedPerson) {
-          ApiService.deleteUser(vm.selectedPerson.id).then(function() {
-            vm.people = vm.people.filter(p => p.id !== vm.selectedPerson.id);
+          ApiService.deleteUser(vm.selectedPerson._id).then(function() {
+            vm.people = vm.people.filter(p => p._id !== vm.selectedPerson._id);
             vm.closeModal();
           }).catch(function(error) {
             console.error("Error deleting user:", error);
