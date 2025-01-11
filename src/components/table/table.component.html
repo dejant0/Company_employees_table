@@ -1,6 +1,8 @@
 <div class="container-fluid w-75 mt-4 ">
   <h1>{{$ctrl.tableTitle}}</h1>
-
+  <button ng-click="$ctrl.onOpenAddEmployeeModal()" type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addUserModal">
+    ADD EMPLOYEE
+  </button>
     <table class="table table-bordered table-hover">
       <thead>
         <tr>
@@ -25,3 +27,4 @@
     </table>
 </div>
 <user-details selected-user="$ctrl.selectedPerson" on-close="$ctrl.closeModal()" on-delete="$ctrl.deleteUser()"></user-details>
+<add-employee show-modal="$ctrl.showAddEmployeeModal" on-close="$ctrl.closeAddEmployeeModal()" reload-users="$ctrl.fetchUsers()"></add-employee>

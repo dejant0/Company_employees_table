@@ -6,5 +6,12 @@ angular.module('myApp')
       onDelete: '&'
     },
     templateUrl: 'components/user-details/user-details.component.html',
-
+    controller: function() {
+      var vm = this;
+    vm.deleteUser = function() {
+      if (confirm("Are you sure you want to delete this record?")) {
+          vm.onDelete(); 
+        }
+    }
+  }
   });

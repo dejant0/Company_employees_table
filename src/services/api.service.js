@@ -13,6 +13,14 @@ angular.module('myApp')
       },
       deleteUser: function(id) {
         return $http.delete(apiUrl + '/' + id).then(response => response.data);
+      },
+      addUser: function(user) {
+        return $http.post(apiUrl, user).then(function(response) {
+          return response.data;  // Return the newly created user data
+        }, function(error) {
+          console.error('Napaka pri dodajanju uporabnika:', error);
+        });
       }
+
     };
   });

@@ -15,10 +15,5 @@ angular.module('myApp')
         vm.onClose(); 
       };
 
-      vm.deleteUser = function() {
-        if (confirm("Are you sure you want to delete this record?")) {
-            vm.onDelete(); 
-          }
-      }
     }
   });

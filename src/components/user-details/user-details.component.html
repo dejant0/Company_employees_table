@@ -16,4 +16,8 @@
     <p><strong>Name:</strong> {{$ctrl.selectedUser.company.name}}</p>
     <p><strong>Catchphrase:</strong> {{$ctrl.selectedUser.company.catchPhrase}}</p>
     <p><strong>Business:</strong> {{$ctrl.selectedUser.company.bs}}</p>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-danger" ng-click="$ctrl.deleteUser()">DELETE</button>
+      </div>
 </modal-component>
+
